@@ -1,8 +1,22 @@
-# React + Vite
+# [Visit for live demo 🌏](https://reactimageslider-fetch.netlify.app/)
+## Concepts
+<ul>
+<li>Asynchronous Fetching of Images </li>
+<li>Components reusability </li>
+<li>Conditional Rendering</li>
+<li>Error handling</li>
+<li>props Handling</li>
+</ul>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Hooks
+<ul>
+<li>useEffect Hook</li>
+<li>useState Hook</li>
 
-Currently, two official plugins are available:
+</ul>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## others
+<ul>
+<li>Tailwind css</li>
+<li>React Icons</li>
+</ul>
