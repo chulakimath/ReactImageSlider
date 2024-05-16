@@ -32,7 +32,7 @@ const ImageSlider = ({ url, limit = 5, page = 1 }) => {
     }, [url]);
 
     useEffect(() => {
-        const autoincr = setInterval(rightHandler, 8000);
+        const autoincr = setInterval(rightHandler, 4000);
         return () => clearInterval(autoincr);
     }, [images]);
 
@@ -51,8 +51,11 @@ const ImageSlider = ({ url, limit = 5, page = 1 }) => {
     }
     return (
         <>
+            <div className='bg-yellow-100 mb-1 text-center text-4xl p-4 font-bold selection:bg-yellow-500 selection:text-white'>
+                Carousel
+            </div>
             <div className='p-2 bg-yellow-200 flex justify-center relative items-center transition-all duration-300'>
-                <div className='flex relative transition-all duration-300'>
+                <div className='flex relative transition-all duration-300 select-none'>
                     <BsArrowLeftCircleFill
                         className='absolute top-[50%] -translate-y-[50%] left-4 cursor-pointer hover:scale-150 transition-transform delay-100'
                         size="30px"
@@ -74,13 +77,16 @@ const ImageSlider = ({ url, limit = 5, page = 1 }) => {
                         size='30px'
                         color='white'
                         onClick={rightHandler}
-                        
+
                     />
                 </div>
-                <span className='absolute z-0 bottom-[7%]'>
+                <span className='absolute z-0 bottom-[7%] '>
                     {images && images.length > 0 ?
                         images.map((_, index) => (
-                            <button key={index} className={`${currentSlide === index ? "bg-white p-3" : "bg-gray-400"} rounded-full p-2 m-1 `}></button>
+                            <button
+                                key={index}
+                                onClick={() => { setCurrentSlide(index) }}
+                                className={`${currentSlide === index ? "bg-white p-3 shadow-lg shadow-blue-300" : "bg-transparent border border-white hover:scale-150 hover:bg-white/65"} rounded-full p-2 m-1  transition-all duration-400`}></button>
                         ))
                         : null}
                 </span>
